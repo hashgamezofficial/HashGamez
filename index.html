@@ -1,2 +1,205 @@
-<h1>Welcome to HashGamez</h1>
-<p>We make great mobile games.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Gamez - Modern Mobile Gaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212; /* Dark gaming background */
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* UTILITIES */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+        h2.section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        /* Little accent line under titles */
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #00C897; /* Modern Teal Accent Color */
+            margin: 15px auto 0;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 2px solid #00C897;
+        }
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            /* Gradient text effect */
+            background: linear-gradient(to right, #ffffff, #00C897);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: #aaaaaa;
+        }
+
+        /* OUR WORK SECTION (Game Grid) */
+        .games-grid {
+            display: grid;
+            /* Auto-fit columns: makes it responsive on phones vs desktops */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        /* Game Card Styling */
+        .game-card {
+            background: #1E1E1E;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+        
+        /* Hover effect for game cards */
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 200, 151, 0.2);
+            border-color: #00C897;
+        }
+        
+        /* The game icon image styling */
+        .game-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 22%; /* Standard App icon shape */
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .game-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .play-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #00C897;
+            color: #121212;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .play-button:hover {
+            background-color: #ffffff;
+        }
+
+        /* GET IN TOUCH SECTION */
+        .contact-section {
+            background: #0a0a0a;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+        .email-link {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00C897;
+            position: relative;
+        }
+        .email-link:hover {
+            color: #ffffff;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE TWEAKS */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .email-link { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Hash Gamez</h1>
+        <p>Creating modern mobile experiences.</p>
+    </header>
+
+    <section class="container" id="work">
+        <h2 class="section-title">Our Work</h2>
+        <div class="games-grid">
+            
+            <a href="https://play.google.com/store/apps/details?id=com.ludo.hash.game" target="_blank" class="game-card-link">
+                <div class="game-card">
+                    <img src="https://play-lh.googleusercontent.com/L7QZq5q5f_Xm5H5qXq8Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z=w240-h480-rw" alt="Ludo Hash Icon" class="game-icon">
+                    <h3>Ludo Hash: Classic Ludo Game</h3>
+                    <span class="play-button">View on Play Store</span>
+                </div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.carrom.board.club.board.game" target="_blank" class="game-card-link">
+                <div class="game-card">
+                    <img src="https://play-lh.googleusercontent.com/8QZq5q5f_Xm5H5qXq8Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z=w240-h480-rw" alt="Carrom Board Club Icon" class="game-icon">
+                    <h3>Carrom Board Club: Dhamaal</h3>
+                    <span class="play-button">View on Play Store</span>
+                </div>
+            </a>
+
+             <a href="https://play.google.com/store/apps/details?id=com.tile.master.match.puzzle.game" target="_blank" class="game-card-link">
+                <div class="game-card">
+                    <img src="https://play-lh.googleusercontent.com/9QZq5q5f_Xm5H5qXq8Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z6Z=w240-h480-rw" alt="Tile Master 3D Icon" class="game-icon">
+                    <h3>Tile Master 3D - Classic Match</h3>
+                    <span class="play-button">View on Play Store</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="container contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="margin-bottom: 30px; color: #aaa;">Have a question or want to collaborate? Reach out to us.</p>
+        <a href="mailto:hashgamez.official@gmail.com" class="email-link">hashgamez.official@gmail.com</a>
+    </section>
+
+    <footer>
+        <p>© 2024 Hash Gamez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
